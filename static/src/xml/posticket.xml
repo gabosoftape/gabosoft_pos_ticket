@@ -11,11 +11,4 @@
     </t>
 
 </t>
-
-<t t-extend="Chrome">
-    <t t-jquery='.pos-logo' t-operation='replace'>
-        <img class="pos-logo" src="/web/binary/company_logo" />
-    </t>
-</t>
-
 </templates>
