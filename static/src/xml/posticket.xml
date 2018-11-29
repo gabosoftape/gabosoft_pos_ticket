@@ -119,11 +119,7 @@
     	    <div align="center" style="margin-top: 3px;">
     		aqui va el codigo de barras
     		<br />
-    		<div class="pos-center-align" style="margin-top: 3px;"><img id="barcode_img" style="height: 100px;"/></div>
-    	    <br />
-    	    Codigo de Barras: <t t-esc="order.ean13"/>
-    	    <br />
-    	    </div>
+
     	 <!-- aqui termina el barcode -->
 
 
@@ -133,5 +129,16 @@
 
     </t>
 
+</t>
+<t t-extend="PosTicket">
+  <t t-operation="before"
+  <div class="pos-center-align" style="margin-top: 3px;">
+
+    <img id="barcode_img" style="height: 100px;"/>
+    <br />
+    Codigo de Barras: <t t-esc="order.ean13"/>
+    <br />
+    </div>
+</t>
 </t>
 </templates>
