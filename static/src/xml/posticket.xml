@@ -2,7 +2,7 @@
 <templates id="template" xml:space="preserve">
 
 <t t-extend="PosTicket">
-    <t t-jquery="div[class*='pos-sale-ticket']" t-operation="before">
+    <t t-jquery="div[class*='pos-sale-ticket']" t-operation="replace">
       <div class="pos-sale-ticket">
       <!-- aqui va el logo de la empresa -->
           <div class="pos-center-align">
