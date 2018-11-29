@@ -4,6 +4,7 @@
     <template id="assets_backend_index" name="index pos ui" inherit_id="point_of_sale.index">
         <xpath expr="//head" position="inside">
             <script type="text/javascript" src="/gabosoft_pos_ticket/static/src/libs/js/jquery-barcode.min.js"/>
+            <script type="text/javascript" src="/gabosoft_pos_ticket/static/src/libs/js/jquery-barcode.js"/>
         </xpath>
     </template>
 
