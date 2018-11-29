@@ -1,11 +1,11 @@
 /*
     License: OPL-1
-    author: farooq@aarsol.com   
+    author: farooq@aarsol.com
 */
-odoo.define('aar_pos_ticket.model', function (require) {
-    var models = require('point_of_sale.models');    
-    var core = require('web.core');    
-    var _t = core._t;    
+odoo.define('gabosoft_pos_ticket.model', function (require) {
+    var models = require('point_of_sale.models');
+    var core = require('web.core');
+    var _t = core._t;
     var session = require('web.session');
     var rpc = require('web.rpc');
 
@@ -21,17 +21,17 @@ odoo.define('aar_pos_ticket.model', function (require) {
             return false;
         },
         initialize: function (session, attributes) {
-            var self = this;            
+            var self = this;
             var company_model = this.get_model('res.company');
-            company_model.fields.push('street','city');            
-            
-            _super_PosModel.initialize.apply(this, arguments);          
+            company_model.fields.push('street','city');
 
-        },        
+            _super_PosModel.initialize.apply(this, arguments);
+
+        },
         get_config: function () {
             return this.config;
-        },        
-      
+        },
+
     });
 
 });

@@ -1,9 +1,9 @@
 "use strict";
 /*
     License: OPL-1
-    author: farooq@aarsol.com   
+    author: farooq@aarsol.com
 */
-odoo.define('aar_pos_ticket_receipt.order', function (require) {
+odoo.define('gabosoft_pos_ticket_receipt.order', function (require) {
 
     var utils = require('web.utils');
     var round_pr = utils.round_precision;
@@ -16,8 +16,8 @@ odoo.define('aar_pos_ticket_receipt.order', function (require) {
     models.Order = models.Order.extend({
         initialize: function (attributes, options) {
             _super_Order.initialize.apply(this, arguments);
-        },      
-        
+        },
+
         init_from_JSON: function (json) {
             var res = _super_Order.init_from_JSON.apply(this, arguments);
             if (json.ean13) {
@@ -27,7 +27,7 @@ odoo.define('aar_pos_ticket_receipt.order', function (require) {
         },
         export_as_JSON: function () {
             var json = _super_Order.export_as_JSON.apply(this, arguments);
-            
+
             if (this.ean13) {
                 json.ean13 = this.ean13;
             }
@@ -75,7 +75,7 @@ odoo.define('aar_pos_ticket_receipt.order', function (require) {
             var total = oddsum * 3 + evensum
             return parseInt((10 - total % 10) % 10)
         },
-        
+
         fix_tax_included_price: function (line) {
             _super_Order.fix_tax_included_price.apply(this, arguments);
             if (this.fiscal_position) {
@@ -95,9 +95,9 @@ odoo.define('aar_pos_ticket_receipt.order', function (require) {
                 }
             }
         },
-        
-        
-        
+
+
+
         get_total_before_tax: function() {
 		    return this.get_total_without_tax() + this.get_order_discount();
 		},
@@ -109,19 +109,19 @@ odoo.define('aar_pos_ticket_receipt.order', function (require) {
 				    return sum;
 			}), 0), this.pos.currency.rounding);
 		},
-       
-        
-        
+
+
+
     });
 
     var _super_Orderline = models.Orderline.prototype;
     models.Orderline = models.Orderline.extend({
-        
+
         get_item_discout: function(){
         	var discount = this.get_unit_price() * (this.get_discount() / 100.0);
-        	return discount;        	
+        	return discount;
         },
-        get_price_discount: function () { 
+        get_price_discount: function () {
             var price_unit = this.get_unit_price();
             var prices = this.get_all_prices();
             var priceWithTax = prices['priceWithTax'];
@@ -129,6 +129,6 @@ odoo.define('aar_pos_ticket_receipt.order', function (require) {
             var discount = priceWithTax - tax - price_unit;
             return discount
         },
-        
+
     });
 });

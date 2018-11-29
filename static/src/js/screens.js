@@ -1,9 +1,9 @@
 "use strict";
 /*
     License: OPL-1
-    author: farooq@aarsol.com   
+    author: farooq@aarsol.com
 */
-odoo.define('aar_pos_ticket.screens', function (require) {
+odoo.define('gabosoft_pos_ticket.screens', function (require) {
 
     var models = require('point_of_sale.models');
     var screens = require('point_of_sale.screens');
@@ -14,7 +14,7 @@ odoo.define('aar_pos_ticket.screens', function (require) {
     var gui = require('point_of_sale.gui');
     var qweb = core.qweb;
 
-   
+
     screens.ReceiptScreenWidget.include({
         renderElement: function () {
             var self = this;
@@ -25,9 +25,9 @@ odoo.define('aar_pos_ticket.screens', function (require) {
                     self.pos.gui.show_screen('products');
                 }
             });
-        },       
+        },
         show: function () {
-            this._super();                       
+            this._super();
             try {
                 JsBarcode("#barcode", this.pos.get('selectedOrder').ean13, {
                     format: "EAN13",
@@ -37,9 +37,9 @@ odoo.define('aar_pos_ticket.screens', function (require) {
             } catch (error) {
             }
         },
-        
+
     });
 
-    
+
 
 });
