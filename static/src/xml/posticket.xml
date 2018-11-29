@@ -118,7 +118,7 @@
 
       <div align="center" style="margin-top: 3px;">
       <br />
-      <div id="barcode_img" style="height: 100px;width: 80%;">
+      <div id="barcode_img" style="width: 80vw;">
       </div>
       </div>
       <!-- aqui termina el barcode -->
