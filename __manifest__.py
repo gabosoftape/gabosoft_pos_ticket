@@ -27,7 +27,7 @@
     	'views/import.xml',
     	'views/pos_order.xml',
     ],
-    'qweb': ['static/src/xml/posticket.xml'],
+    'qweb': ['point_of_sale/static/src/xml/pos.xml'],
     'images': ['static/description/banner.png'],
     'demo': [],
     'installable': True,
