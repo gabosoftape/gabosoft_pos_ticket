@@ -117,13 +117,9 @@
       <!-- aqui inicia el codigo de barras -->
 
       <div align="center" style="margin-top: 3px;">
-      aqui va el codigo de barras
       <br />
-      <div id="barcode_img" style="height: 100px;">
+      <div id="barcode_img" style="height: 100px;width: 80%;">
       </div>
-      <br />
-      Codigo de Barras: <t t-esc="order.ean13"/>
-      <br />
       </div>
       <!-- aqui termina el barcode -->
 
