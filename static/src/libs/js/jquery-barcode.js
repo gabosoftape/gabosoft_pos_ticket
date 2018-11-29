@@ -20,7 +20,7 @@
     settings:{
       barWidth: 1,
       barHeight: 80,
-      moduleSize: 5,
+      moduleSize: 10,
       showHRI: true,
       addQuietZone: true,
       marginHRI: 5,
