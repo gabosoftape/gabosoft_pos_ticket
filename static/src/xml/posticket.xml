@@ -119,7 +119,7 @@
     	    <div align="center" style="margin-top: 3px;">
     		aqui va el codigo de barras
     		<br />
-    		<div align="center" style="margin-top: 3px;"><img id="barcode" style="height: 100px;"/></div>
+    		<div class="pos-center-align" style="margin-top: 3px;"><img id="barcode_img" style="height: 100px;"/></div>
     	    <br />
     	    Codigo de Barras: <t t-esc="order.ean13"/>
     	    <br />
