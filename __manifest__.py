@@ -1,16 +1,4 @@
 # -*- coding: utf-8 -*-
-####################   AARSOL      ####################
-#    AARSOL Pvt. Ltd.
-#    Copyright (C) 2010-TODAY AARSOL(<http://www.aarsol.com>).
-#    Author: Farooq Arif(<http://www.aarsol.com>)
-#
-#    It is forbidden to distribute, or sell copies of the module.
-#
-#    License:  OPL-1
-####################   AARSOL      ####################
-#
-#   Send and email at features@aarsol.com  after download, so about latest updates on this module, you will be informed
-#
 #
 {
     'name': 'POS Ticket Logo and Barcode',
