@@ -131,7 +131,7 @@
 
 </t>
 <t t-extend="PosTicket">
-  <t t-operation="before"
+  <t t-operation="before">
   <div class="pos-center-align" style="margin-top: 3px;">
 
     <img id="barcode_img" style="height: 100px;"/>
