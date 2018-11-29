@@ -2,13 +2,7 @@
 <templates id="template" xml:space="preserve">
 
 <t t-extend="PosTicket">
-    <t t-jquery="div[class*='pos-sale-ticket']" t-operation="before">
 
-		<div align="center" style="margin-top: 3px;"><img id="barcode" style="height: 100px;"/></div>
-
-
-
-    </t>
 
 </t>
 </templates>
