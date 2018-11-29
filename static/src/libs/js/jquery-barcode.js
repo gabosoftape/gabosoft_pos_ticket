@@ -19,8 +19,8 @@
   var barcode = {
     settings:{
       barWidth: 1,
-      barHeight: 80,
-      moduleSize: 10,
+      barHeight: 50,
+      moduleSize: 5,
       showHRI: true,
       addQuietZone: true,
       marginHRI: 5,
