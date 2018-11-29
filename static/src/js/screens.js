@@ -29,24 +29,7 @@ odoo.define('gabosoft_pos_ticket.screens', function (require) {
         show: function () {
             this._super();
             try {
-                JsBarcode("#barcode_img", this.pos.get('selectedOrder').ean13, {
-                    format: "EAN13",
-                    displayValue: true,
-                    output: "css",
-                    barWidth: 1,
-                    barHeight: 50,
-                    moduleSize: 5,
-                    showHRI: true,
-                    addQuietZone: true,
-                    marginHRI: 5,
-                    bgColor: "#FFFFFF",
-                    color: "#000000",
-                    fontSize: 10,
-                    output: "css",
-                    posX: 0,
-                    posY: 0
-
-                });
+                $("#barcode_img").barcode(this.pos.get('selectedOrder').ean13,"ean13");
             } catch (error) {
             }
         },
