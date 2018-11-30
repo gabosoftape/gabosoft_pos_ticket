@@ -20,7 +20,7 @@
       <!-- inicia el tema de la facturacion -->
 
           <div class="pos-center-align">Factura Numero:
-            <t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + 0000 + pos.config.x_ind_resolution += 1"/>
+            <t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + ' ' + pos.config.x_ind_resolution + order.sequence_number"/>
              <t t-esc="pos.config.x_bill_number"/></div>
       <!-- termina el tema de la facturacion  -->
           <div class="pos-center-align"><t t-esc="order.formatted_validation_date"/> <t t-esc="order.name"/></div>
