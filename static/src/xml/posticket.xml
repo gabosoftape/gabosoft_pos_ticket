@@ -18,7 +18,18 @@
           </t>
       <!-- aqui termina el header -->
       <!-- inicia el tema de la facturacion -->
-          <div class="pos-center-align">Factura Numero:  <t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + 0000 + pos.config.x_ind_resolution + 1"/><t t-esc="pos.config.x_bill_number"/></div>
+
+          <div class="pos-center-align">
+              Factura Numero:
+            <p  t-if = "pos.config.x_ind_resolution < 10" > <t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + '0000' + pos.config.x_ind_resolution + 1"/>
+             <t t-esc="pos.config.x_bill_number"/> </p>
+            <p  t-elif = "pos.config.x_ind_resolution < 100" ><t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + '000' + pos.config.x_ind_resolution + 1"/>
+             <t t-esc="pos.config.x_bill_number"/></p>
+            <p  t-else = "pos.config.x_ind_resolution < 1000" ><t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + '00' + pos.config.x_ind_resolution + 1"/>
+             <t t-esc="pos.config.x_bill_number"/> </p>
+
+
+           </div>
       <!-- termina el tema de la facturacion  -->
           <div class="pos-center-align"><t t-esc="order.formatted_validation_date"/> <t t-esc="order.name"/></div>
          <br />

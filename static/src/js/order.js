@@ -33,11 +33,13 @@ odoo.define('gabosoft_pos_ticket_receipt.order', function (require) {
             }
             if (!this.ean13 && this.uid) { // init ean13 and automatic create ean13 for order
                 var ean13 = '998';
+                
                 if (this.pos.user.id) {
                     ean13 += this.pos.user.id;
                 }
                 if (this.sequence_number) {
                     ean13 += this.sequence_number;
+
                 }
                 if (this.pos.config.id) {
                     ean13 += this.pos.config.id;
