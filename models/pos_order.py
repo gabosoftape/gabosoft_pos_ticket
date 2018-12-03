@@ -28,8 +28,13 @@ class pos_order(models.Model):
 
         if ui_order.get('ean13', False):
             order_fields.update({
-                'ean13': ui_order['ean13'],
-                'ref_factura' : ui_order['ref_factura']
+                'ean13': ui_order['ean13']
+
+            })
+        if ui_order.get('ref_factura', False):
+            order_fields.update({
+                'ref_factura': ui_order['ref_factura']
+
             })
 
         return order_fields
