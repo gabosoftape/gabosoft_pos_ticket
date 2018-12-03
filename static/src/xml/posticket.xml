@@ -17,15 +17,17 @@
               <br />
           </t>
       <!-- aqui termina el header -->
-      <!-- inicia el tema de la facturacion-->
+      <!-- inicia el tema de la facturacion
 
           <div class="pos-center-align">Factura Numero:
             <t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + ' ' + '000' + order.sequence_number"/>
-             <t t-esc="pos.config.x_bill_number"/></div>
-    <!--   termina el tema de la facturacion  -->
+             <t t-esc="pos.config.x_bill_number"/></div>y
+      termina el tema de la facturacion  -->
           <div class="pos-center-align">
-            <t t-esc="order.formatted_validation_date"/>
-            <t t-esc="order.name"/>
+            <p  t-if = "line.name == 'Efectivo (COP)'" ><t t-esc="order.formatted_validation_date"/> <t t-esc="order.name"/></p>
+            <p  t-elif = "line.name == 'REDEBAN (COP)'" ><t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + ' ' + '000' + order.sequence_number"/>
+             <t t-esc="pos.config.x_bill_number"/></p>
+            <p  t-else = "line.name" > ¡Bienvenido! </p>
           </div>
          <br />
           <t t-esc="widget.pos.company.name"/><br />
