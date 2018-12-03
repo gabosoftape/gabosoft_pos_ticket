@@ -28,19 +28,13 @@
               <tr>
                   <td>
                       <t t-esc="line.name"/>
-                      <t t-esc="order.formatted_validation_date"/> <t t-esc="order.name"/>
-                      <t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + ' ' + '000' + order.sequence_number"/>
-                       <t t-esc="pos.config.x_bill_number"/>
-                  </td>
-                  <td class="pos-right-align">
-                      <t t-esc="widget.format_currency(line.get_amount())"/>
+
                   </td>
               </tr>
             </t>
-
-            
-
-
+            <t t-esc="order.formatted_validation_date"/> <t t-esc="order.name"/>
+            <t t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + ' ' + '000' + order.sequence_number"/>
+            <t t-esc="pos.config.x_bill_number"/>
           </div>
          <br />
           <t t-esc="widget.pos.company.name"/><br />
