@@ -20,7 +20,7 @@ class pos_order(models.Model):
     _inherit = "pos.order"
 
     ean13 = fields.Char('Ean13')
-    ref_factura = fields.Char('Numero de factura')
+    
 
     @api.model
     def _order_fields(self, ui_order):
@@ -31,10 +31,6 @@ class pos_order(models.Model):
                 'ean13': ui_order['ean13']
 
             })
-        if ui_order.get('ref_factura', False):
-            order_fields.update({
-                'ref_factura': ui_order['ref_factura']
 
-            })
 
         return order_fields
