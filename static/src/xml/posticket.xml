@@ -32,7 +32,6 @@
                 <t t-if="line.name == 'REDEBAN (COP)'" t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + ' ' + '000' + order.sequence_number"/>
                 <t t-if="line.name == 'REDEBAN (COP)'" t-esc="pos.config.x_bill_number"/>
                 <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.name"/>
-
               </tr>
             </t>
           </div>
