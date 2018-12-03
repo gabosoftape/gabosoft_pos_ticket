@@ -24,12 +24,14 @@
              <t t-esc="pos.config.x_bill_number"/></div>y
       termina el tema de la facturacion  -->
           <div class="pos-center-align">
+            <t t-esc="order.formatted_validation_date"/>
+          </div>
+          <div class="pos-center-align">
             <t t-foreach="paymentlines" t-as="line">
               <tr>
                 Factura No.
                 <t t-if="line.name == 'REDEBAN (COP)'" t-set="pos.config.x_bill_number" t-value="pos.config.x_prefix_resolution + ' ' + '000' + order.sequence_number"/>
                 <t t-if="line.name == 'REDEBAN (COP)'" t-esc="pos.config.x_bill_number"/>
-                <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.formatted_validation_date"/>
                 <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.name"/>
               </tr>
             </t>
