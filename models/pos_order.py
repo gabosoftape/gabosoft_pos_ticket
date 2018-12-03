@@ -18,16 +18,18 @@ _logger = logging.getLogger(__name__)
 
 class pos_order(models.Model):
     _inherit = "pos.order"
-    
+
     ean13 = fields.Char('Ean13')
-    
+    ref_factura = fields.Char('Numero de factura')
+
     @api.model
     def _order_fields(self, ui_order):
         order_fields = super(pos_order, self)._order_fields(ui_order)
-        
+
         if ui_order.get('ean13', False):
             order_fields.update({
-                'ean13': ui_order['ean13']
+                'ean13': ui_order['ean13'],
+                'ref_factura' : ui_order['ref_factura']
             })
-            
+
         return order_fields
