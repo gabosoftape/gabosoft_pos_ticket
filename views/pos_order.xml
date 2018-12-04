@@ -36,21 +36,7 @@
             </field>
         </record>
 
-        <!-- Sequence types for customer codes -->
-
-         <record id="seq_type_res_student" model="ir.sequence.type">
-             <field name="name">Student Code</field>
-             <field name="code">res.partner.student</field>
-         </record>
-
-         <!-- Sequences for customer codes -->
-
-         <record id="seq_res_student" model="ir.sequence">
-             <field name="name">Student Code</field>
-             <field name="code">res.partner.student</field>
-             <field name="prefix">CM</field>
-             <field name="padding">3</field>
-         </record>
+        
 
 
 
