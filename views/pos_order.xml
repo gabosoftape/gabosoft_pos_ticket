@@ -9,7 +9,7 @@
                 <xpath expr="//field[@name='name']" position="after">
                     <field name="ean13"/>
                 </xpath>
-                
+
             </field>
         </record>
 
@@ -19,9 +19,9 @@
             <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="before">
-                    <field name="ean13"/>                    
+                    <field name="ean13"/>
                 </xpath>
-                
+
             </field>
         </record>
 
@@ -31,11 +31,18 @@
             <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='name']" position="before">
-                    <field name="ean13"/>                    
+                    <field name="ean13"/>
                 </xpath>
             </field>
         </record>
-        
+
+        <record id="seq_hr_haberesydesc" model="ir.sequence">
+            <field name="name">Haberes y Descuentos</field>
+            <field name="code">hr.haberesydesc</field>
+            <field name="prefix">HD</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+
     </data>
 </odoo>
-

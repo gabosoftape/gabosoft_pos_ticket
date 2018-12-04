@@ -20,7 +20,7 @@ class pos_order(models.Model):
     _inherit = "pos.order"
 
     ean13 = fields.Char('Ean13')
-    
+    factura_numero = fields.Char('Numero de Factura')
 
     @api.model
     def _order_fields(self, ui_order):
@@ -34,3 +34,11 @@ class pos_order(models.Model):
 
 
         return order_fields
+
+name = fields.Char('Código', translate=True, default="Nuevo")
+
+@api.model
+    def create(self, vals):
+        if vals.get('name', "Nuevo") == "Nuevo":
+            vals['name'] = self.env['ir.sequence'].next_by_code('hr.haberesydesc') or "Nuevo"
+        return super(hr_haberesydesc, self).create(vals)
