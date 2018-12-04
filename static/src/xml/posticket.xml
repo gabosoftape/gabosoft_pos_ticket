@@ -34,7 +34,7 @@
                   <br/><span>Factura No. </span>
                 </t>
                 </t>
-                <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.name"/>
+                <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.name + 'moco'"/>
               </tr>
             </t>
           </div>
