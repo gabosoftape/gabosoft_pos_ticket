@@ -29,7 +29,7 @@
           <div class="pos-center-align">
             <t t-foreach="paymentlines" t-as="line">
               <tr>
-                <t t-if="line.name == 'REDEBAN (COP)'" t-esc="ir.sequence.rfcm"/>
+                <t t-if="line.name == 'REDEBAN (COP)'" t-esc="ir.sequence.secuencia1"/>
                 <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.name"/>
               </tr>
             </t>
