@@ -33,3 +33,21 @@ class pos_order(models.Model):
 
 
         return order_fields
+
+class res_partner(osv.osv):
+    _inherit = 'res.partner'
+    _description = "Customers"
+
+    _columns = {
+        'code': fields.char('Student ID',size=5, readonly=True),
+    }
+
+    _sql_constraints = [
+    ('unique_code', 'unique(code)', 'Number of Student must be unique!'),
+    ]
+
+    # Override the customer create fuction for genarate Students Unique number
+    def create(self, cr, uid, vals, context=None):
+        if vals.get('is_company') == True:
+                vals['code']=self.pool.get('ir.sequence').get(cr, uid, 'res.partner.student')
+        return super(res_partner,self).create(cr, uid, vals, context)
