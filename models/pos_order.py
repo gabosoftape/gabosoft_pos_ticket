@@ -34,15 +34,3 @@ class pos_order(models.Model):
 
 
         return order_fields
-
-fact_secuence = fields.Char('Secuencia 1', readonly=True)
-
-@api.model
-def create(self, vals):
-    print "+++++++++++++++++++++++++++++++++++++++++++++++++"
-    print "prepare inherit create function"
-    print "change the name TI with sequence"
-    vals['fact_secuence'] = self.env['ir.sequence'].next_by_code('secuencia1')
-    print "Inherit complete"
-    print "+++++++++++++++++++++++++++++++++++++++++++++++++"
-    return super(secuencia1, self).create(vals)
