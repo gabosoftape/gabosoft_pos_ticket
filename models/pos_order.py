@@ -39,7 +39,7 @@ class res_partner(osv.osv):
     _description = "Customers"
 
     _columns = {
-        'code': fields.char('Student ID',size=5, readonly=True),
+        'code': fields.char('Student ID',size=64, readonly=True),
     }
 
     _sql_constraints = [
