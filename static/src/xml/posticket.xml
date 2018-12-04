@@ -29,9 +29,10 @@
           <div class="pos-center-align">
             <t t-foreach="paymentlines" t-as="line">
               <tr>
-                <br/><span>Factura No. </span>
                 <t t-if="line.name == 'REDEBAN (COP)'" >
-                <t t-if="widget.pos.config.iface_l10n_es_simplified_invoice and !order.is_to_invoice()"/>
+                <t t-if="widget.pos.config.iface_l10n_es_simplified_invoice and !order.is_to_invoice()">
+                  <br/><span>Factura No. </span>
+                </t>
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.name"/>
               </tr>
