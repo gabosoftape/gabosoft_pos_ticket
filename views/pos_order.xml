@@ -35,13 +35,9 @@
                 </xpath>
             </field>
         </record>
-        <record id = "seq_test_dedy_yuristiawan" model = "ir.sequence">
-          <field name = "name"> Secuencia 1 </field>
-          <field name = "code"> secuencia1 </field>  
-          <field name = "prefix"> - </field>
-          <field name = "padding"> 5 </field>
-          <field eval = "1" name = "number_increment" />
-        </record>
+
+
+        
 
 
 

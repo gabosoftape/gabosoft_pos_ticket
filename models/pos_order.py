@@ -20,7 +20,7 @@ class pos_order(models.Model):
     _inherit = "pos.order"
 
     ean13 = fields.Char('Ean13')
-    factura_numero = fields.Char('Numero de Factura')
+    secuencia1 = fields.Char('Secuencia Fact')
 
     @api.model
     def _order_fields(self, ui_order):
