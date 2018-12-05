@@ -27,7 +27,6 @@
             <t t-esc="order.formatted_validation_date"/>
           </div>
           <div class="pos-center-align">
-            <t t-esc="order.sale_journal">
             <t t-foreach="paymentlines" t-as="line">
               <tr>
 
