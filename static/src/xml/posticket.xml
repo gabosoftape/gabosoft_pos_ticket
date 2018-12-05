@@ -35,7 +35,7 @@
                   <t t-esc="order.name"/>
                 </t>
                 </t>
-                <t t-if="line.name == 'Efectivo (COP)'" t-set="widget.pos.is_l10n_es_simplified_invoice" t-value="false" >
+                <t t-if="line.name == 'Efectivo (COP)'" t-set="widget.pos.is_l10n_es_simplified_invoice" t-value="False" >
                   <t t-esc="order.name"/>
                 </t>
               </tr>
