@@ -30,6 +30,7 @@
             <t t-esc="order.x_flag_redeban"/>
             <t t-foreach="paymentlines" t-as="line">
               <tr>
+                <t t-esc="order.sale_journal">
                 <t t-if="line.name == 'REDEBAN (COP)'" >
                   validacion redeban
                   <t t-set="order.x_flag_redeban" t-value="True" />
