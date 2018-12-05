@@ -44,6 +44,7 @@
                   <t t-esc="order.name"/>
                   mostro order name
                   <t t-esc="order.x_flag_redeban"/>
+                  valor flag
                 </t>
               </tr>
             </t>
