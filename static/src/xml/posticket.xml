@@ -35,6 +35,7 @@
                   seteo true a flag
                   <span>Factura No. <t t-esc="order.name"/></span>}
                   mostro order name
+                  <t t-esc="order.x_flag_redeban"/>
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
                   validacion efectivo
@@ -42,6 +43,7 @@
                   seteo false a flag
                   <t t-esc="order.name"/>
                   mostro order name
+                  <t t-esc="order.x_flag_redeban"/>
                 </t>
               </tr>
             </t>
