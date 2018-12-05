@@ -31,22 +31,13 @@
               <tr>
 
                 <t t-if="line.name == 'REDEBAN (COP)'" >
-                  validacion redeban
                   <t t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="True" />
-                  seteo true a flag
                   <span>Factura No. <t t-esc="order.name"/></span>
-                  mostro order name
-                  <t t-esc="order.x_flag_redeban"/>
-                  valor flag redeban
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
-                  validacion efectivo
                   <t t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="False" />
-                  seteo false a flag
                   <t t-esc="order.name"/>
-                  mostro order name
-                  <t t-esc="order.x_flag_redeban"/>
-                  valor flag efectivo
+
                 </t>
               </tr>
             </t>
