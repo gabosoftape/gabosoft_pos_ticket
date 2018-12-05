@@ -27,6 +27,7 @@
             <t t-esc="order.formatted_validation_date"/>
           </div>
           <div class="pos-center-align">
+            <t t-esc="order.x_flag_redeban"/>
             <t t-foreach="paymentlines" t-as="line">
               <tr>
                 <t t-if="line.name == 'REDEBAN (COP)'" >
