@@ -33,7 +33,7 @@
                   validacion redeban
                   <t t-set="order.x_flag_redeban" t-value="True" />
                   seteo true a flag
-                  <span>Factura No. <t t-esc="order.name"/></span>}
+                  <span>Factura No. <t t-esc="order.name"/></span>
                   mostro order name
                   <t t-esc="order.x_flag_redeban"/>
                   valor flag redeban
@@ -44,7 +44,7 @@
                   seteo false a flag
                   <t t-esc="order.name"/>
                   mostro order name
-                  <t t-esc="pos.order.x_flag_redeban"/>
+                  <t t-esc="order.x_flag_redeban"/>
                   valor flag efectivo
                 </t>
               </tr>
