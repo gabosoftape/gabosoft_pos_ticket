@@ -31,14 +31,11 @@
               <tr>
 
                 <t t-if="line.name == 'REDEBAN (COP)'" >
-                  <t t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="True" />
-                  <t t-set="widget.pos.config.is_l10n_es_simplified_invoice" t-value="True" />
+
                   <span>Factura No. <t t-esc="order.name"/></span>
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
-                  <t t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="False" />
-                  <t t-set="widget.pos.config.is_l10n_es_simplified_invoice" t-value="False" />
-                  <t t-esc="order.pos_reference"/>
+  
                   <t t-esc="order.name"/>
 
                 </t>
