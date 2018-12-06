@@ -35,6 +35,8 @@
                   <span>Factura No. <t t-esc="order.name"/></span>
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
+                  <t t-set="order.x_flag_redeban" t-value="True"/>
+                  <t t-esc="'se valido flag'" />
                   <t t-set="order.name" t-value="'Orden'+'-00'+order.pos_session_id+'-0'+order.sequence_number"/>
                   <t t-set="widget.pos.order.pos_reference" t-value="order.name"/>
                   <t t-esc="order.pos_reference"/>
