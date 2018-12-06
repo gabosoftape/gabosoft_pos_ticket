@@ -38,6 +38,7 @@
                   <t t-set="order.name" t-value="'Orden'+'-00'+order.pos_session_id+'-000'+order.sequence_number"/>
                   <t t-set="order.pos_reference" t-value="order.name"/>
                   <t t-esc="order.pos_reference"/>
+                  <t t-esc="order.id"/>
 
                 </t>
               </tr>
