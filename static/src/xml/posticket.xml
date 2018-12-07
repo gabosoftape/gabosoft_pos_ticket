@@ -35,13 +35,8 @@
                   <span>Factura No. <t t-esc="order.name"/></span>
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
-                  
-
                   <t t-set="order.name" t-value="'Orden'+'-00'+order.pos_session_id+'-0'+order.sequence_number"/>
-                  <t t-set="order.pos_reference" t-value="order.name"/>
-                  <t t-esc="order.pos_reference"/>
-                  <t t-esc="order.id"/>
-
+                  <t t-esc="order.name" />
                 </t>
               </tr>
             </t>
