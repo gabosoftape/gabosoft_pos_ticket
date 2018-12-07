@@ -30,6 +30,4 @@ class pos_order(models.Model):
                 'ean13': ui_order['ean13']
 
             })
-
-
         return order_fields
