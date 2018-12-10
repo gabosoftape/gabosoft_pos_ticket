@@ -40,6 +40,10 @@
   border-width: medium;
   border-color: #000;
   border-radius: 3px;
-  padding: 4px;
+  padding-top: 2rem;
 
+
+}
+#img_coupon {
+  margin-bottom: 1rem;
 }
