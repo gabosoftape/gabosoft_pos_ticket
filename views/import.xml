@@ -16,11 +16,5 @@
             <link rel="stylesheet" href="/gabosoft_pos_ticket/static/src/css/aarsol.css"/>
         </xpath>
     </template>
-    <template id="report_footer_custom" name="gabosoft_pos_ticket assets coupon" inherit_id="report.external_layout_footer">
-        <xpath expr="//div[@id='coupon']" position="replace">
-            <div id="coupon">
-                <img src="gabosoft_pos_ticket/static/description/coupon.jpg" style="width:50%"/>
-            </div>
-        </xpath>
-    </template>
+    
 </odoo>
