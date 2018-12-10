@@ -26,11 +26,11 @@
           <div class="pos-center-align">
             <t t-esc="order.formatted_validation_date"/>
           </div>
-          <div class="pos-center-align">
+          <div id="type_invoice_dynamic_title" class="pos-center-align">
             <t t-foreach="paymentlines" t-as="line">
               <tr>
                 <t t-if="line.name == 'REDEBAN (COP)'" >
-                  
+
                   <br/><span>Factura No. </span>
                   <t t-esc="order.name"/>
                 </t>
