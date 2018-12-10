@@ -129,12 +129,7 @@
                   <t t-esc="widget.format_currency(order.get_change())"/>
                   </td></tr>
           </table>
-          <t t-if="receipt.footer">
-              <br />
-              <div style='text-align:center'>
-                  <t t-esc="receipt.footer" />
-              </div>
-          </t>
+
       <!-- aqui inicia el codigo de barras -->
 
       <div class="footer" align="center" style="margin-top: 3px;">
@@ -145,7 +140,12 @@
       <br />
       </div>
       <!-- aqui inicia el coupon barcode -->
-
+      <t t-if="receipt.footer">
+          <br />
+          <div style='text-align:center'>
+              <t t-esc="receipt.footer" />
+          </div>
+      </t>
 
 
       </div>
