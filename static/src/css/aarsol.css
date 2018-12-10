@@ -37,5 +37,8 @@
 }
 
 #barcode_img {
+  position: absolute;
+}
+#img_coupon {
   position: absolute; 
 }
