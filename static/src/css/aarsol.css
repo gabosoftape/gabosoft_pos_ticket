@@ -37,9 +37,9 @@
 }
 
 #barcode_img {
+  border-width: medium;
+  border-color: #000;
+  border-radius: 3px;
+  padding: 4px;
 
-  border-top-width: 10px;
-  border-right-width: 1em;
-  border-bottom-width: thick;
-  border-left-width: thin;
 }
