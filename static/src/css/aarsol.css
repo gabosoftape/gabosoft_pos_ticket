@@ -38,6 +38,8 @@
 
 #barcode_img {
 
-  right: 200px;
-  border-top-width: 8px;
+  border-top-width: 10px;
+  border-right-width: 1em;
+  border-bottom-width: thick;
+  border-left-width: thin;
 }
