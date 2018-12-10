@@ -29,13 +29,13 @@
           <div class="pos-center-align">
             <t t-foreach="paymentlines" t-as="line">
               <tr>
-                <t t-if="line.name == 'REDEBAN (COP)'" t-set="is_l10n_es_simplified_invoice" t-value="True" >
-                <t t-if="widget.pos.config.iface_l10n_es_simplified_invoice and !order.is_to_invoice()">
+                <t t-if="line.name == 'REDEBAN (COP)'" t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="True" >
                   <br/><span>Factura No. </span>
                   <t t-esc="order.name"/>
                 </t>
-                </t>
-                <t t-if="line.name == 'Efectivo (COP)'" t-esc="order.name"/>
+                <t t-if="line.name == 'Efectivo (COP)'" t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="True">
+                 <t t-esc="order.name"/>
+                 </t>
               </tr>
             </t>
           </div>
