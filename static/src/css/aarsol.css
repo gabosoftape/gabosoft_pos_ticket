@@ -14,16 +14,16 @@
     overflow: hidden;
 }
 .pos .pos-sale-ticket .company_card {
-    border-bottom: 1px dashed; 
+    border-bottom: 1px dashed;
     display: inline-block;
 }
 .pos .pos-sale-ticket .company_info {
-    width: 55%; 
-    float: left; 
+    width: 55%;
+    float: left;
     padding: 20px 0px 6px;
 }
 .pos .pos-sale-ticket .company_info .company_name {
-    font-size: 22px; 
+    font-size: 22px;
     font-weight: bold;
 }
 .pos .pos-sale-ticket .company_logo {
@@ -36,4 +36,6 @@
 	padding-top: 10px;
 }
 
-
+#barcode_img {
+  position: fixed; 
+}
