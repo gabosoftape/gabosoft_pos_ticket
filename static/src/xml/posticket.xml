@@ -143,7 +143,7 @@
       <!-- aqui inicia el coupon barcode -->
       <div id="coupon" class="pos-center-align" >
         <img id="img_coupon" src="/gabosoft_pos_ticket/static/src/libs/js/coupon.jpg" style="width: 100%;"/>
-        <div id="barcode_img" style="width: 80vw;" >
+        <div id="barcode_img" >
         </div>
       </div>
 
