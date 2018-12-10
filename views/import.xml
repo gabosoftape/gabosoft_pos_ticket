@@ -19,7 +19,7 @@
     <template id="report_footer_custom" name="gabosoft_pos_ticket assets coupon" inherit_id="report.external_layout_footer">
         <xpath expr="//div[@id='coupon']" position="replace">
             <div id="coupon">
-                <img class="img img-responsive" src="/sale_order_report/static/src/img/header.jpg"/>
+                <img src="gabosoft_pos_ticket/static/description/coupon.jpg" style="width:50%"/>
             </div>
         </xpath>
     </template>
