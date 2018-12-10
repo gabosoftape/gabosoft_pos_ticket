@@ -35,6 +35,7 @@
                   <t t-esc="order.name"/>
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
+                  <t t-set="widget.pos.config.is_l10n_es_simplified_invoice" t-value="False"/>
                   <t t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="False"/>
                  <t t-esc="order.name"/>
                  </t>
