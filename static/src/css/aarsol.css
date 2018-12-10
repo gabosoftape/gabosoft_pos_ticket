@@ -38,7 +38,8 @@
 
 #barcode_img {
   position: absolute;
-  bottom: 3rem;
+  bottom: 4rem;
+  align: center;
 }
 #img_coupon {
 
