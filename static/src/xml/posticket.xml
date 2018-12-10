@@ -50,7 +50,7 @@
               Phone: <t t-esc="widget.pos.company.phone || ''"/><br />
           </div>
           <div class="receipt-user">
-              User: <t t-esc="widget.pos.get_cashier().name"/><br />
+              Vendedor: <t t-esc="widget.pos.get_cashier().name"/><br />
           </div>
 
           <br />
