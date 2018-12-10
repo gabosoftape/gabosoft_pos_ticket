@@ -26,16 +26,16 @@
           <div class="pos-center-align">
             <t t-esc="order.formatted_validation_date"/>
           </div>
-          <div id="type_invoice_dynamic_title" class="pos-center-align">
+          <div class="pos-center-align">
             <t t-foreach="paymentlines" t-as="line">
               <tr>
                 <t t-if="line.name == 'REDEBAN (COP)'" >
-
+                  <t t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="True"/>
                   <br/><span>Factura No. </span>
                   <t t-esc="order.name"/>
                 </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
-
+                  <t t-set="widget.pos.config.iface_l10n_es_simplified_invoice" t-value="False"/>
                  <t t-esc="order.name"/>
                  </t>
               </tr>
