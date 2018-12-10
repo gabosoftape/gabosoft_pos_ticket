@@ -37,5 +37,5 @@
 }
 
 #barcode_img {
-  padding-left: 2rem;
+  position: fixed;
 }
