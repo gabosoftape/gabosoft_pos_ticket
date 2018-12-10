@@ -37,5 +37,6 @@
 }
 
 #barcode_img {
-  position: fixed;
+  position: absolute;
+  right: 200px;
 }
