@@ -33,9 +33,30 @@
                   <br/><span>Factura No. </span>
                   <t t-esc="order.name"/>
                 </t>
+                <t t-if="line.name == 'REDEBAN BCM (COP)'" >
+                  <br/><span>Factura No. </span>
+                  <t t-esc="order.name"/>
+                </t>
+                <t t-if="line.name == 'REDEBAN BPI (COP)'" >
+                  <br/><span>Factura No. </span>
+                  <t t-esc="order.name"/>
+                </t>
+                <t t-if="line.name == 'REDEBAN VENECIA (COP)'" >
+                  <br/><span>Factura No. </span>
+                  <t t-esc="order.name"/>
+                </t>
                 <t t-if="line.name == 'Efectivo (COP)'" >
                  <t t-esc="order.name"/>
                  </t>
+                 <t t-if="line.name == 'Efectivo Venecia (COP)'" >
+                  <t t-esc="order.name"/>
+                  </t>
+                  <t t-if="line.name == 'Efectivo BCM (COP)'" >
+                   <t t-esc="order.name"/>
+                   </t>
+                   <t t-if="line.name == 'Efectivo BPI (COP)'" >
+                    <t t-esc="order.name"/>
+                    </t>
               </tr>
             </t>
           </div>
