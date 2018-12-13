@@ -155,8 +155,8 @@
 
       <div class="footer" align="center" style="margin-top: 3px;">
         <hr size="1" style="color: #000;"/>
-        <strong>Terminos y condiciones </strong>
-        Aqui el resto de carreta
+        <div class="row"><strong>Terminos y condiciones </strong></div>
+        <div class="row">Aqui el resto de carreta</div>
         <div><img id="img_coupon" src="/gabosoft_pos_ticket/static/src/libs/js/coupon2.png" style="width: 70%;"/></div>
         <div class="row">Validez</div>
         <hr size="1" style="color: #000;"/>
