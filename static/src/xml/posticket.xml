@@ -162,7 +162,7 @@
         <br />
         <div><img id="img_coupon" src="/gabosoft_pos_ticket/static/src/libs/js/coupon2.png" style="width: 70%;"/></div>
         <br />
-        <div class="row">Con este cupón recibes un 5% de descuento en tu proxima compra. Válido hasta <t t-esc="( order.formatted_validation_date + datetime.timedelta(days=8) )"/></div>
+        <div class="row">Con este cupón recibes un 5% de descuento en tu proxima compra. Válido hasta <t t-esc="( datetime.datetime.strptime(o.date_invoice, '%Y-%m-%d %H:%M:%S') + datetime.timedelta(days=15) ).strftime('%m/%d/%Y')"/></div>
         <br />
         <hr size="1" style="color: #000;"/>
         <br />
