@@ -35,7 +35,6 @@
                 </t>
                 <t t-if="line.name == 'REDEBAN BCM (COP)'" >
                   <br/><span>Factura No. </span>
-                  <t t-esc="line.name" />
                   <t t-esc="order.name"/>
                 </t>
                 <t t-if="line.name == 'REDEBAN BPI (COP)'" >
