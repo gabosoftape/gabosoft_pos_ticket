@@ -35,3 +35,7 @@ odoo.define('gabosoft_pos_ticket.model', function (require) {
     });
 
 });
+
+var div = document.getElementById("caducidad_coupon1");
+   div.textContent = "FECHA ACTUAL + (8)";
+   var text = div.textContent;
