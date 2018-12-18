@@ -30,13 +30,13 @@ odoo.define('gabosoft_pos_ticket.screens', function (require) {
             this._super();
             try {
                 $("#barcode_img").barcode(this.pos.get('selectedOrder').ean13,"ean13");
-                let hoy = new Date();
-                let fechalimite1EnMilisegundos = 1000 * 60 * 60 * 24 * 8;
-                let fechalimite2EnMilisegundos = 1000 * 60 * 60 * 24 * 30;
-                let suma1 = hoy.getTime() + fechalimite1EnMilisegundos;
-                let suma2 = hoy.getTime() + fechalimite2EnMilisegundos;  //getTime devuelve milisegundos de esa fecha
-                let fechalimite1 = new Date(suma1);
-                let fechalimite1 = new Date(suma2);
+                var hoy = new Date();
+                var fechalimite1EnMilisegundos = 1000 * 60 * 60 * 24 * 8;
+                var fechalimite2EnMilisegundos = 1000 * 60 * 60 * 24 * 30;
+                var suma1 = hoy.getTime() + fechalimite1EnMilisegundos;
+                var suma2 = hoy.getTime() + fechalimite2EnMilisegundos;  //getTime devuelve milisegundos de esa fecha
+                var fechalimite1 = new Date(suma1);
+                var fechalimite1 = new Date(suma2);
                 console.log("la fecha del cupon1 seria .."+fechalimite1);
                 console.log("la fecha del cupon2 seria .."+fechalimite2);
             } catch (error) {
