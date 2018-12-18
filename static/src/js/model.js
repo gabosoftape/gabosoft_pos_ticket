@@ -25,7 +25,6 @@ odoo.define('gabosoft_pos_ticket.model', function (require) {
             var div = document.getElementById("caducidad_coupon1");
             console.log("estamos en la funcion initalize .. of models.js");
             div.textContent = "FECHA ACTUAL + (8)";
-            var text = div.textContent;
             var company_model = this.get_model('res.company');
             company_model.fields.push('street','city');
 
