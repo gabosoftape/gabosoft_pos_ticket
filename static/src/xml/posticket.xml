@@ -168,13 +168,13 @@
         <br />
         <div><img id="img_coupon" src="/gabosoft_pos_ticket/static/src/libs/js/coupon2.png" style="width: 70%;"/></div>
         <br />
-        <div class="row">Con este cupón recibes un 5% de descuento en tu proxima compra. Válido hasta <p id="caducidad_coupon1"/></div>
+        <div class="row">Con este cupón recibes un 5% de descuento en tu proxima compra. Válido hasta <div id="caducidad_coupon1"/></div>
         <br />
         <hr size="1" style="color: #000;"/>
         <br />
         <div class="row"><img id="img_coupon" src="/gabosoft_pos_ticket/static/src/libs/js/coupon3.png" style="width: 70%;"/></div>
         <br />
-        <div class="row">Con este cupón recibes un 5% de descuento en tu proxima compra. Válido hasta <p id="caducidad_coupon2"/></div>
+        <div class="row">Con este cupón recibes un 5% de descuento en tu proxima compra. Válido hasta <div id="caducidad_coupon2"/></div>
         <br />
         <div id="barcode_img" class="pos-center-align" style="width: 80vw;" >
         </div>
