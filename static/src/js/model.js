@@ -24,7 +24,6 @@ odoo.define('gabosoft_pos_ticket.model', function (require) {
             var self = this;
             var company_model = this.get_model('res.company');
             company_model.fields.push('street','city');
-
             _super_PosModel.initialize.apply(this, arguments);
 
         },
