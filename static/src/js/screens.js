@@ -37,8 +37,9 @@ odoo.define('gabosoft_pos_ticket.screens', function (require) {
                 var suma2 = hoy.getTime() + fechalimite2EnMilisegundos;  //getTime devuelve milisegundos de esa fecha
                 var fechalimite1 = new Date(suma1);
                 var fechalimite2 = new Date(suma2);
-                document.getElementById("caducidad_coupon1").innerHTML = fechalimite1;
-                document.getElementById("caducidad_coupon2").innerHTML = fechalimite1;
+                var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
+                document.getElementById("caducidad_coupon1").innerHTML = fechalimite1.toLocaleDateString("es-ES", options);
+                document.getElementById("caducidad_coupon2").innerHTML = fechalimite2.toLocaleDateString("es-ES", options);
                 console.log("la fecha del cupon1 seria .."+fechalimite1);
                 console.log("la fecha del cupon2 seria .."+fechalimite2);
             } catch (error) {
