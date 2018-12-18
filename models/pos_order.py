@@ -28,7 +28,6 @@ class pos_order(models.Model):
 
         if ui_order.get('ean13', False):
             order_fields.update({
-                'ean13': ui_order['ean13'],
-                'vaucher': ui_order['vaucher']
+                'ean13': ui_order['ean13']
             })
         return order_fields
