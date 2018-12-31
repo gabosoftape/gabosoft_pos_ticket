@@ -37,8 +37,8 @@ odoo.define('gabosoft_pos_ticket.screens', function (require) {
                 var fechalimite4EnMilisegundos = 1000 * 60 * 60 * 24 * 31;
                 var suma1 = hoy.getTime() + fechalimite1EnMilisegundos;
                 var suma2 = hoy.getTime() + fechalimite2EnMilisegundos;
-                var suma3 = hoy.getTime() + fechalimite1EnMilisegundos;
-                var suma4 = hoy.getTime() + fechalimite2EnMilisegundos;  //getTime devuelve milisegundos de esa fecha
+                var suma3 = hoy.getTime() + fechalimite3EnMilisegundos;
+                var suma4 = hoy.getTime() + fechalimite4EnMilisegundos;  //getTime devuelve milisegundos de esa fecha
                 var fechalimite1 = new Date(suma1);
                 var fechalimite2 = new Date(suma2);
                 var fechalimite3 = new Date(suma3);
