@@ -36,7 +36,7 @@
                 <t t-if="paymentlines.length == 1">
                     <t t-foreach="paymentlines" t-as="line">
                     <tr>
-                    <t t-if="line.name == 'Redeban (COP)'" >
+                    <t t-if="line.name == 'REDEBAN (COP)'" >
                         <br/><span>Factura No. </span>
                         <t t-esc="order.name"/>
                     </t>
