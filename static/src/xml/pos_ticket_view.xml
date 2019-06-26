@@ -10,11 +10,17 @@
     <t t-extend="PosTicket">
         <t t-jquery='.pos-sale-ticket' t-operation='replace'>
             <div class="pos-sale-ticket">
-
-                <div>
-                    <div style="width: 45%;float: left; ">
+                    <div style="width: 80%;float: center; ">
                         <img src='/web/binary/company_logo' style="width:100%"/>
                     </div>
+                    <t t-if="receipt.header">
+                        <div style='text-align:center'>
+                            <t t-esc="receipt.header" />
+                        </div>
+                    <br/>
+                    </t>
+                    <t t-esc="order.name"/>
+                    <t t-esc="moment().format('L LT')"/>
                     <div style="width: 55%; float: left; padding: 20px 0px;">
                         <t t-if="order.get_client()">
                             Cliente: <t t-esc="order.get_client().name"/><br />
@@ -23,10 +29,8 @@
                          <t t-if="widget.pos.company.phone">
                             Telefono: <t t-esc="widget.pos.company.phone || ''"/><br />
                         </t>
-                        <t t-esc="order.name"/>
-                        <t t-esc="moment().format('L LT')"/>
                     </div>
-                </div>
+                
                 <t t-if="widget.pos.company.name">
                     <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.name"/></div>
                 </t>
@@ -34,12 +38,7 @@
                     <div style="width:100%;text-align:right;"><t t-esc="widget.pos.company.email"/></div>
                 </t>
                 <br />
-                <t t-if="receipt.header">
-                    <div style='text-align:center'>
-                        <t t-esc="receipt.header" />
-                    </div>
-                    <br/>
-                </t>
+                
                 <table class='receipt-orderlines'>
                     <colgroup>
                         <col width='40%' />
