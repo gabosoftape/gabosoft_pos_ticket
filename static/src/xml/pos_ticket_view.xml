@@ -161,7 +161,7 @@
             <br />
             <div class="row">Con este cupón recibes un 10% de descuento en tu próxima compra. Válido desde el <strong><div id="caducidad_coupon3"></div></strong>hasta el<strong><div id="caducidad_coupon4"></div></strong></div>
             <br />
-            <div id="barcode_img" class="pos-center-align" style="width: 80vw;" >
+            <div id="barcode_img" class="row" style="width: 80vw;" >
             </div>
             <hr size="1" style="color: #000;"/>
           <br />
