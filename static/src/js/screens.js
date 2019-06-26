@@ -29,7 +29,7 @@ odoo.define('gabosoft_pos_ticket.screens', function (require) {
         show: function () {
             this._super();
             try {
-                $("#barcode_img").barcode(this.pos.get('selectedOrder').ean13,"ean13");
+                $("#barcode_img").barcode(this.pos.get('selectedOrder').ean13,"ean13",output: "bmp");
                 var hoy = new Date();
                 var fechalimite1EnMilisegundos = 1000 * 60 * 60 * 24 * 1;
                 var fechalimite2EnMilisegundos = 1000 * 60 * 60 * 24 * 9;
