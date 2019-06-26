@@ -31,7 +31,10 @@
     'category': 'Point of Sale',
     'depends': ['base', 'point_of_sale'],
     'license': 'AGPL-3',
-    'data': [],
+    'data': [
+        'views/import.xml',
+        'views/pos_order.xml',
+    ],
     'qweb': ['static/src/xml/pos_ticket_view.xml'],
     'images': ['static/description/banner.jpg'],
     'demo': [],
