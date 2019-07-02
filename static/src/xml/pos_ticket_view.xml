@@ -79,7 +79,7 @@
                           <t t-esc="orderline.get_product().display_name"/>
                            <t t-if="orderline.get_discount() > 0">
                               <div class="pos-disc-font">
-                                  With a <t t-esc="orderline.get_discount()"/>% discount
+                                  Con un <t t-esc="orderline.get_discount()"/>% de descuento
                               </div>
                           </t>
                       </td>
@@ -109,7 +109,7 @@
                   </t>
                   <tr>
                       <t t-if="order.get_total_discount() > 0">
-                          <td>Discount:</td>
+                          <td>Descuento:</td>
                           <td class="pos-right-align">
                               <t t-esc="widget.format_currency(order.get_total_discount())"/>
                           </td>
@@ -137,7 +137,7 @@
               </table>
               <br />
               <table class='receipt-change'>
-                  <tr><td>Change:</td><td class="pos-right-align">
+                  <tr><td>Cambio:</td><td class="pos-right-align">
                       <t t-esc="widget.format_currency(order.get_change())"/>
                       </td></tr>
               </table>
